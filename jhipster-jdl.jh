@@ -1,0 +1,28 @@
+entity Worker {
+	name String,
+    age Integer,
+    position String
+}
+
+entity Task {
+	name String,
+	status String,
+    execTime ZonedDateTime,
+    priority Integer,
+    date ZonedDateTime
+}
+
+entity Skill {
+	name String
+}
+
+entity Experience {
+	name String,
+
+}
+
+relationship OneToMany {
+	Worker{tasks} to Task
+    Worker{skills} to Skill
+    Worker{experiences} to Experience
+}
